@@ -16,7 +16,7 @@ spec:
 # This example works with Windows Fast Ring WSL2 and Docker Desktop Edge Release 2/9/2020
 #
   hostPath:
-    path: /tmp/openemr
+    path: /var/log/apache2/
     type: DirectoryOrCreate
 ---
 apiVersion: v1
@@ -48,7 +48,8 @@ spec:
 # This example works with Windows Fast Ring WSL2 and Docker Desktop Edge release 2/9/2020
 #
   hostPath:
-    path: /tmp/openemr/sites
+    path: /var/www/localhost/htdocs/openemr/sites/default
+    type: DirectoryOrCreate
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
