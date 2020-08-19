@@ -15,7 +15,8 @@ spec:
 # This example works with Windows Fast Ring WSL2 and Docker Desktop Edge Release 2/9/2020
 #
   hostPath:
-    path: "/data/mysql"
+    path: /var/local/mysql
+    type: DirectoryOrCreate
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
